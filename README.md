@@ -15,7 +15,7 @@ This project detects student engagement from webcam images using a custom-traine
 
 ---
 
-## 📊 Emotion Scoring
+## 📊 ENGAGEMENT Scoring
 
 Each detected class contributes to a total score based on the following weightage:
 
