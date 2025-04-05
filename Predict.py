@@ -4,7 +4,7 @@ import cv2
 # Emotion weights
 emotion_scores = {
     'Boredom': 3, 
-    'Confusion': 3, 
+    'Confusion': 2, 
     'Engaged': 5, 
     'Frustration': 2, 
     'Sleepy': 0,
@@ -20,10 +20,10 @@ def predict(chosen_model, img, classes=[], conf=0.5):
     return results
 
 # Load the model
-model = YOLO("train/weights/best.pt")
+model = YOLO("best.pt")
 
 # Read the image
-image = cv2.imread("2.jpg")
+image = cv2.imread("1.jpg")
 
 # Get predictions
 results = predict(model, image, classes=[], conf=0.5)
@@ -42,4 +42,4 @@ for result in results:
    
 
 print("\nDetected Emotions:", detected_classes)
-print("Total Score:", total_score)
+print("Total Score:", total_score/5)
